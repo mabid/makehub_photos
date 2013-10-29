@@ -3,12 +3,17 @@ Makehub::Application.routes.draw do
   get "me/projects" => 'me#index'
 
   resources :media_objects
+  resources :photos
 
   resources :projects do
     member do
       post :fork
     end
-    resources :steps
+    resources :steps do
+      member do
+        get :add_media
+      end
+    end
     resources :materials
   end
 

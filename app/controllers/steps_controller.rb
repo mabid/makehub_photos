@@ -13,6 +13,10 @@ class StepsController < ApplicationController
   def show
   end
 
+  def add_media
+
+  end
+
   # GET /steps/new
   def new
     @step = @project.steps.new
@@ -33,7 +37,7 @@ class StepsController < ApplicationController
     respond_to do |format|
       if @step.save
         @project.save
-        format.html { redirect_to project_step_path(@project, @step), notice: 'Step was successfully created.' }
+        format.html { redirect_to add_media_project_step_path(@project, @step), notice: 'Step was successfully created.' }
         format.json { render action: 'show', status: :created, location: @step }
       else
         format.html { render action: 'new' }

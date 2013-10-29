@@ -54,3 +54,9 @@ gem "omniauth-google-oauth2"
 # we use authority to limit what a user can do, kind of like CanCan.
 # https://github.com/nathanl/authority
 gem 'authority'
+
+#ajax file uploads
+gem 'plupload-rails'
+
+#paperclip for attachments
+gem 'paperclip'

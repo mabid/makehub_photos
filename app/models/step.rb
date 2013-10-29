@@ -7,4 +7,6 @@ class Step < ActiveRecord::Base
   include Authority::Abilities
 
   validates_presence_of :project_id, :name, :content
+
+  has_many :media_objects
 end
